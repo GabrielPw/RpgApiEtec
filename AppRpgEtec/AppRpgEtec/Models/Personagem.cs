@@ -15,6 +15,8 @@ namespace AppRpgEtec.Models
         public ClasseEnum Classe { get; set; }
         public Byte[] FotoPersonagem { get; set; }
 
-
+        public int Disputas { get; set; }
+        public int Vitorias { get; set; }
+        public int Derrotas { get; set; }
     }
 }

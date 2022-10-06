@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppRpgEtec.ViewModels.Personagens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,14 @@ namespace AppRpgEtec.Views.Personagens
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListagemView : ContentPage
     {
+
+        ListagemPersonagemViewModel viewModel;
         public ListagemView()
         {
             InitializeComponent();
+
+            viewModel = new ListagemPersonagemViewModel();
+            BindingContext = viewModel;
         }
     }
 }

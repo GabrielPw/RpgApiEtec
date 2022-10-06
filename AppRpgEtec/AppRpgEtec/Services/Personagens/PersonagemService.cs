@@ -12,7 +12,7 @@ namespace AppRpgEtec.Services.Personagens
         private readonly Request _request;
         private string _token;
 
-        private const string ApiUrlBase = "http://"; // Link da API.
+        private const string ApiUrlBase = "http://gabrielrpg.somee.com/RpgApi/Personagens"; // Link da API.
 
         public PersonagemService(string token)
         {

@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace AppRpgEtec.ViewModels.Personagens
 {
@@ -19,6 +21,21 @@ namespace AppRpgEtec.ViewModels.Personagens
             pService = new PersonagemService(token);
 
             Personagens = new ObservableCollection<Personagem>();
+            _ = ObterPersonagens();
+        }
+
+        public async Task ObterPersonagens() {
+
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+                await Application.Current.MainPage.DisplayAlert("Oops", ex.Message + "Detalhes: " + ex.InnerException, "Ok");
+                throw;
+            }
         }
     }
 }
